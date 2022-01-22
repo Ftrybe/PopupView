@@ -217,12 +217,12 @@ public struct Popup<PopupContent>: ViewModifier where PopupContent: View {
     private var hiddenOffset: CGFloat {
         if position == .top {
             if presenterContentRect.isEmpty {
-                return -1000
+                return -1300
             }
             return -presenterContentRect.midY - sheetContentRect.height/2 - 5
         } else {
             if presenterContentRect.isEmpty {
-                return 1000
+                return 1300
             }
             return screenHeight - presenterContentRect.midY + sheetContentRect.height/2 + 5
         }
